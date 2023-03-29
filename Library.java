@@ -29,12 +29,12 @@ public class Library extends Building{
   }
 
   public boolean containsTitle(String title) { // returns true if the title appears as a key in the Library's collection, false otherwise
-      return this.collection.contains(title);
+      return this.collection.containsKey(title);
   } 
   
   public boolean isAvailable(String title) { // returns true if the title is currently available, false otherwise
-    if (this.collection.contains(title)) {
-      if (this.collection.containsValue(true)) {
+    if (this.containsTitle(title) == true) {
+      if (this.collection.get(title) == true) {
         return true;
       }
       else {
@@ -74,8 +74,11 @@ public class Library extends Building{
     forbes.printCollection();
     System.out.println(" ");
     forbes.returnBook("Chicka Chicka Boom Boom");
+    forbes.addTitle("Poppy");
+    forbes.checkOut("Poppy");
     forbes.printCollection();
     System.out.println(" ");
+    System.out.println(forbes.isAvailable("Poppy"));
   }
   
 }
