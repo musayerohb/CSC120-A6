@@ -1,4 +1,3 @@
-/* This is a stub for the House class */
 import java.util.ArrayList;
 
 public class House extends Building{
@@ -52,9 +51,15 @@ public class House extends Building{
   public static void main(String[] args) {
     House ziskind = new House("Ziskind","1 Henshaw Ave Northampton MA", 4, true);
     System.out.println(ziskind);
+    System.out.println(ziskind.hasDiningRoom + ": dining room test");
 
     ziskind.moveIn("Billy Bob Sr");
+    System.out.println(ziskind.isResident("Billy Bob Sr"));
     System.out.println(ziskind.isResident("Billy Bob Jr"));
+    ziskind.moveOut("Billy Bob Sr");
+    ziskind.moveIn("Mr. Bean");
+    ziskind.moveIn("Sherlock Holmes");
+    System.out.println(ziskind.nResidents());
 
     House capen = new House("Capen", "26 Prospect St Northampton MA", 3, false);
     System.out.println(capen);

@@ -1,4 +1,3 @@
-/* This is a stub for the Library class */
 import java.util.Hashtable;
 
 public class Library extends Building{
@@ -14,7 +13,7 @@ public class Library extends Building{
     }
     
   public String removeTitle(String title) {
-    this.collection.remove(title, false);
+    this.collection.remove(title);
     return title;
   } // return the title that we removed
 
@@ -48,7 +47,19 @@ public class Library extends Building{
   }
     
   public void printCollection() { // prints out the entire collection in an easy-to-read way (including checkout status)
-    System.out.println(this.collection);
+    if (this.collection.isEmpty()) {
+      System.out.println("There is nothing in the collection.");
+    }
+    else {
+      for (String key:this.collection.keySet()){
+        if (this.collection.get(key)) {
+          System.out.println(key + ", Available to borrow.");
+        }
+        else {
+          System.out.println(key + ", Checked out.");
+        }
+      }
+    }
   } 
 
 
@@ -56,8 +67,15 @@ public class Library extends Building{
     Library forbes = new Library("Forbes", "10 Elm St", 1);
     forbes.addTitle("If You Give A Mouse A Cookie");
     forbes.addTitle("Chicka Chicka Boom Boom");
+    forbes.checkOut("Chicka Chicka Boom Boom");
     forbes.printCollection();
-
+    System.out.println(" ");
+    forbes.removeTitle("If You Give A Mouse A Cookie");
+    forbes.printCollection();
+    System.out.println(" ");
+    forbes.returnBook("Chicka Chicka Boom Boom");
+    forbes.printCollection();
+    System.out.println(" ");
   }
   
-  }
+}
