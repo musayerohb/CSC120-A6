@@ -8,6 +8,8 @@ MUSA: It makes the code in each class more specific to that class alone. And hon
 EVA: Inheritance more clearly connects classes to their methods by making the attributes and methods in each class particular to the class alone. It makes coding with multiple classes much easier to work on because every portion of the program feels more isolated, which also makes it easier to put together at the end to have the program run as a whole.
 
 
+Angelica: Inheritance allows for communication between the classes. By using 'extends' in my code I can utilize the methods and attributes to create a hierarchy that better shows the relationships between the clasess. The superclass is useful because it simplifies the codes in the other classes
+
 - What worked, what didn't, what advice would you give someone taking this course in the future?
 
 BOTH: 
