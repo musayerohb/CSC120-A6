@@ -12,7 +12,7 @@ Angelica: Inheritance allows for communication between the classes. By using 'ex
 
 - What worked, what didn't, what advice would you give someone taking this course in the future?
 
-BOTH: 
+ALL: 
 
 Inheritance allowed us to think of all the classes as separate entities from each other, so it was really important that we kept all of the code separate. The only times our classes interacted was with the superclass, Building, in order to 'inherit' its attributes. This kept the assignment really straightfoward for us.
 
